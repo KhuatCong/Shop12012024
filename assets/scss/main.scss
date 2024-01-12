@@ -1,0 +1,225 @@
+header {
+    background-image: linear-gradient(#FF00FF, pink) !important;
+
+    .bg-top {
+        // background-color: #FF00FF;
+
+        .top-header {
+            padding: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .logo-header {
+                .logo {
+                    width: 140px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .search-header {
+                flex: 1;
+                max-width: 60%;
+            }
+
+            .user-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+                .icon {
+                    cursor: pointer;
+                    color: #ffffff;
+
+                    &:hover {
+                        color: #00FF00;
+                    }
+                }
+
+                .user {
+                    margin-right: 15px;
+
+                    &:hover {
+                        .box-user {
+                            position: absolute;
+                            top: 100%;
+                            opacity: 1;
+                            visibility: visible;
+
+                        }
+
+                    }
+
+
+                    .box-user {
+                        background-color: #ffffff;
+                        position: absolute;
+                        top: 110%;
+                        right: 30px;
+                        opacity: 0;
+                        visibility: hidden;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        z-index: 9999;
+                        transition: all 0.3s ease-in-out;
+
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            border: 10px solid transparent;
+                            border-bottom-color: #fff;
+                            content: "";
+                            right: 5px;
+                            top: -18px;
+                        }
+
+                        .list-user {
+                            li {
+                                a {
+                                    display: block;
+                                    color: #000000;
+                                    padding: 5px 30px 5px 5px;
+                                    margin: 5px 0;
+
+                                    &:hover {
+                                        background-color: #00FF00;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cart {
+                    &:hover {
+                        .box-cart {
+                            position: absolute;
+                            top: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .box-cart {
+                        background-color: #ffffff;
+                        position: absolute;
+                        top: 110%;
+                        right: 0px;
+                        padding: 50px;
+                        opacity: 0;
+                        visibility: hidden;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        z-index: 9999;
+                        transition: all 0.3s ease-in-out;
+
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            border: 10px solid transparent;
+                            border-bottom-color: #fff;
+                            content: "";
+                            right: 5px;
+                            top: -18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bg-menu {
+
+        // background-color: #FFE4B5;
+        .menu-header {
+            position: relative;
+            padding: 6px 0;
+
+            .box-menu {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    &:hover {
+                        .box-product {
+                            opacity: 1;
+                            top: 100%;
+                            visibility: visible;
+                        }
+                    }
+
+                    a {
+                        margin: 0 20px;
+                        color: #000000;
+                        padding: 3px;
+
+                        &:hover {
+                            color: #00aab9;
+                        }
+
+                        font: {
+                            weight: 500;
+                        }
+
+                        text-transform: uppercase;
+
+                        // position: relative;
+
+                        // &::before {
+                        //     content: '';
+                        //     position: absolute;
+                        //     bottom: 0;
+                        //     left: 0;
+                        //     right: 0;
+                        //     height: 2px;
+                        //     background-color: #00aab9;
+                        //     transform-origin: bottom right;
+                        //     transform: scaleX(0);
+                        //     transition: transform 0.5s ease;
+                        // }
+
+                        // &:hover::before {
+                        //     transform-origin: bottom left;
+                        //     transform: scaleX(1);
+                        // }
+                    }
+                }
+
+                .header-product {
+
+                    .box-product {
+                        position: absolute;
+                        background-color: #ffffff;
+                        top: calc(100% + 10px);
+                        left: 0;
+                        width: 100%;
+                        opacity: 0;
+                        visibility: hidden;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        z-index: 9999;
+                        transition: all 0.3s ease-in-out;
+
+                        ul {
+                            li {
+                                a {
+                                    display: block;
+                                    margin: 0;
+                                    padding: 8px;
+                                    transition: all 0.2s ease-in-out;
+                                    text-transform: none;
+
+                                    &:hover {
+                                        color: #FF00FF;
+                                        transform: translateX(10px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
